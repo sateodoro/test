@@ -24,8 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>MIVE: New Design and Benchmark for Multi-Instance Video Editing</title>
+  <link rel="icon" type="image/x-icon" href="static/images/mive-icon.svg">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,21 +52,30 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">
+              <img src="static/images/mive-logo.svg" alt="Logo" style="vertical-align: bottom; height: 65px">
+              : New Design and Benchmark for Multi-Instance Video Editing
+            </h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Samuel Teodoro</a><sup>1,*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Agus Gunawan</a><sup>1,*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Soo Ye Kim</a><sup>2</sup>
+                  </span>,
+                  <span class="author-block">
+                    <a href="FOURTH AUTHOR PERSONAL LINK" target="_blank">Jihyong Oh</a><sup>3,&#8224;</sup>
+                  </span>,
+                  <span class="author-block">
+                    <a href="FIFTH AUTHOR PERSONAL LINK" target="_blank">Munchurl Kim</a><sup>1,&#8224;</sup>
                   </span>
                   </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  <div class="is-size-6 publication-authors">
+                    <span class="author-block"><sup>1</sup>Korea Advanced Institute of Scient and Technology, South Korea<br><sup>2</sup>Adobe Research, California<br><sup>3</sup>Chung-Ang University, South Korea</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution, <sup>&#8224;</sup>Co-Corresponding Authors</small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -127,14 +136,19 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
+
+      <h2 class="subtitle has-text-centered">
+        TL;DR: MIVE is a general-purpose zero-shot multi-instance video editing framework that uses
+        novel sampling and probability redistribution techniques to enable faithful instance edits
+        while preventing unintended changes in diverse video scenarios.
+      </h2>
+
+      <video preload="auto" poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+
     </div>
   </div>
 </section>
@@ -148,7 +162,23 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Recent AI-based video editing has enabled users to edit videos through simple
+            text prompts, significantly simplifying the editing process. However, recent zero-shot
+            video editing techniques primarily focus on global or single-object edits, which
+            can lead to unintended changes in other parts of the video. When multiple objects
+            require localized edits, existing methods face challenges, such as unfaithful editing,
+            editing leakage, and lack of suitable evaluation datasets and metrics. To overcome
+            these limitations, we propose a zero-shot <b>M</b>ulti-<b>I</b>nstance <b>V</b>ideo <b>E</b>diting
+            framework, called MIVE. MIVE is a general-purpose mask-based framework, not dedicated
+            to specific objects (e.g., people). MIVE introduces two key modules: (i) Disentangled
+            Multi-instance Sampling (DMS) to prevent editing leakage and (ii) Instance-centric
+            Probability Redistribution (IPR) to ensure precise localization and faithful editing.
+            Additionally, we present our new MIVE Dataset featuring diverse video scenarios and
+            introduce the Cross-Instance Accuracy (CIA) Score to evaluate editing leakage in
+            multi-instance video editing tasks. Our extensive qualitative, quantitative, and
+            user study evaluations demonstrate that MIVE significantly outperforms recent
+            state-of-the-art methods in terms of editing faithfulness, accuracy, and leakage
+            prevention, setting a new benchmark for multi-instance video editing.
           </p>
         </div>
       </div>
@@ -157,62 +187,20 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<section class="hero">
   <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
+
+          <h2 class="title is-3">Video</h2>
+
           <div class="publication-video">
             <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
+
         </div>
       </div>
     </div>
@@ -220,59 +208,803 @@
 </section>
 <!-- End youtube video -->
 
+<!-- Method -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this work, we present <b>MIVE</b>, a general-purpose, zero-shot
+            <b>M</b>ulti-<b>I</b>nstance <b>V</b>ideo <b>E</b>diting framework that disentangles
+            the multi-instance video editing process, achieving faithful edits and reduced
+            attention leakage. Our MIVE effectively disentangles the multi-instance video
+            editing process through our (i) Disentangled Multi-instance Sampling (DMS) which
+            reduces editing leakage and (ii) Instance-centric Probability Redistribution (IPR)
+            which enhances editing localization and faithfulness.
+          </p>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+          <p>
+            In our DMS (shown below), we independently modify each instance using the latent parallel
+            sampling (blue box), and the multiple denoised instance latents are harmonized through
+            the noise parallel sampling (green box) preceded by the latent fusion (yellow box) and
+            re-inversion (orange box).
+          </p>
+
+          <img src="./static/images/dms.png"/>
+
+          <p style="margin-top: 12px;">
+            Since our DMS requires that the edited objects appear within their masks, we propose our IPR
+            (shown below) to ensure that this condition is consistently met.
+          </p>
+
+          <img src="./static/images/ipr.png"/>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- Method -->
 
+<!-- MIVE Editing Results -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">MIVE Editing Results</h2>
+        <div class="content has-text-justified">
 
+          <td colspan="3">
+            <p style="margin-top: -3px;">
+              Hover over the videos to see the original video and text prompts.
+            </p>
+          </td>
 
+          <table width="690" align="center">
+            <tr>
+              <th style="font-size: 14px" align="center">Single-Instance Editing: MIVE Dataset</th>
+              <th style="font-size: 14px" align="center">Multi-Instance Editing: MIVE Dataset</th>
+            </tr>
 
+            <tr>
+              <th>
+                <div class="video-wrapper" style="width: 100%">
+                  <video preload="auto" class="hover-video" src="static/videos/mive_editing_results/189_saZFIuXU5W8/189_saZFIuXU5W8_masked_frames.mp4" preload="metadata" autoplay loop muted> </video>
+                  <video preload="auto" class="default-video" src="static/videos/mive_editing_results/189_saZFIuXU5W8/189_saZFIuXU5W8_mive.mp4" preload="metadata" autoplay controls loop muted></video>
+                  <div class="overlay-text">
+                    <i><span style="color: rgb(0, 255, 0)">"a Pembroke Welsh Corgi"</span></i>
+                  </div>
+                </div>
+              </th>
 
+              <th>
+                <div class="video-wrapper" style="width: 100%">
+                  <video preload="auto" class="hover-video" src="static/videos/mive_editing_results/1147_n64m2lh89vI/1147_n64m2lh89vI_masked_frames.mp4" preload="metadata" autoplay loop muted> </video>
+                  <video preload="auto" class="default-video" src="static/videos/mive_editing_results/1147_n64m2lh89vI/1147_n64m2lh89vI_mive.mp4" preload="metadata" autoplay controls loop muted></video>
+                  <div class="overlay-text">
+                    <i>
+                      <span style="color: rgb(255, 0, 0)">"an astronaut in blue suit"</span>, <br/>
+                      <span style="color: rgb(0, 0, 255)">"a sorceress with black mask"</span>, <br/>
+                      <span style="color: rgb(0, 255, 0)">"a red metallic robot"</span>
+                    </i>
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </table>
 
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
+          <table width="690" align="center">
+            <tr>
+              <th style="font-size: 14px" align="center">Multi-Instance Editing: Video-in-the-Wild</th>
+              <th style="font-size: 14px" align="center">Partial Instance Editing: Video-in-the-Wild</th>
+            </tr>
 
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+            <tr>
+              <th>
+                <div class="video-wrapper" style="width: 100%">
+                  <video preload="auto" class="hover-video" src="static/videos/mive_editing_results/bunny-chick/bunny-chick_masked_frames.mp4" preload="metadata" autoplay loop muted> </video>
+                  <video preload="auto" class="default-video" src="static/videos/mive_editing_results/bunny-chick/bunny-chick_mive.mp4" preload="metadata" autoplay controls loop muted></video>
+                  <div class="overlay-text">
+                    <i>
+                      <span style="color: rgb(0, 255, 0)">"a white rabbit"</span>, <br/>
+                      <span style="color: rgb(242, 219, 10)">"a colorful parrot"</span>
+                    </i>
+                  </div>
+                </div>
+              </th>
+
+              <th>
+                <div class="video-wrapper" style="width: 100%">
+                  <video preload="auto" class="hover-video" src="static/videos/mive_editing_results/woman-walking/woman-walking_masked_frames.mp4" preload="metadata" autoplay loop muted> </video>
+                  <video preload="auto" class="default-video" src="static/videos/mive_editing_results/woman-walking/woman-walking_mive.mp4" preload="metadata" autoplay controls loop muted></video>
+                  <div class="overlay-text">
+                    <i><span style="color: rgb(242, 219, 10)">"a pink dress with flowers"</span></i>
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </table>
+
+        </div>
       </div>
     </div>
-  </section>
-<!--End paper poster -->
+  </div>
+</section>
+<!-- MIVE Editing Results -->
 
+<!-- Comparison -->
+<section class="section hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Comparison</h2>
+
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <h2 class="title is-6 has-text-justified">
+                Prompt: <i>"In a domestic setting, an <span style="color: rgb(255, 0, 0);">alien</span>
+                stands in front of<span style="color: rgb(242, 219, 10);">oven</span> and
+                <span style="color: rgb(0, 255, 0)">yellow washing machine</span>
+                against a blue wall, with a blue recycling trash can to the left."</i>
+              </h2>
+
+              <table width="690" align="center">
+                <tbody>
+                  <tr>
+                    <th>
+                      <video poster="" id="video1" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/110_2wu_Z4M5RxU/110_2wu_Z4M5RxU_input.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video2" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/110_2wu_Z4M5RxU/110_2wu_Z4M5RxU_masked_frames.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video3" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/110_2wu_Z4M5RxU/110_2wu_Z4M5RxU_mive.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">Input</th>
+                    <th style="font-size: 16px" align="center">Masked Input</th>
+                    <th style="font-size: 16px" align="center">MIVE (Ours)</th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <video poster="" id="video4" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/110_2wu_Z4M5RxU/110_2wu_Z4M5RxU_controlvideo.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video5" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/110_2wu_Z4M5RxU/110_2wu_Z4M5RxU_flatten.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video6" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/110_2wu_Z4M5RxU/110_2wu_Z4M5RxU_fresco.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">ControlVideo</th>
+                    <th style="font-size: 16px" align="center">FLATTEN</th>
+                    <th style="font-size: 16px" align="center">FreSCo</th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <video poster="" id="video7" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/110_2wu_Z4M5RxU/110_2wu_Z4M5RxU_tokenflow.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video8" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/110_2wu_Z4M5RxU/110_2wu_Z4M5RxU_rave.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video9" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/110_2wu_Z4M5RxU/110_2wu_Z4M5RxU_ground-a-video.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">TokenFlow</th>
+                    <th style="font-size: 16px" align="center">RAVE</th>
+                    <th style="font-size: 16px" align="center">Ground-A-Video</th>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="item">
+              <h2 class="title is-6 has-text-justified">
+                Prompt: <i>"A <span style="color: rgb(0, 255, 0);">robot</span>
+                plays a <span style="color: rgb(255, 0, 0);">piano with neon keys</span>
+                on the floor, with an open sheet music book."</i>
+              </h2>
+
+              <table width="690" align="center">
+                <tbody>
+                  <tr>
+                    <th>
+                      <video poster="" id="video10" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1226_AjHGm3q93j0/1226_AjHGm3q93j0_input.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video11" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1226_AjHGm3q93j0/1226_AjHGm3q93j0_masked_frames.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video12" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1226_AjHGm3q93j0/1226_AjHGm3q93j0_mive.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">Input</th>
+                    <th style="font-size: 16px" align="center">Masked Input</th>
+                    <th style="font-size: 16px" align="center">MIVE (Ours)</th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <video poster="" id="video13" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1226_AjHGm3q93j0/1226_AjHGm3q93j0_controlvideo.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video14" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1226_AjHGm3q93j0/1226_AjHGm3q93j0_flatten.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video15" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1226_AjHGm3q93j0/1226_AjHGm3q93j0_fresco.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">ControlVideo</th>
+                    <th style="font-size: 16px" align="center">FLATTEN</th>
+                    <th style="font-size: 16px" align="center">FreSCo</th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <video poster="" id="video16" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1226_AjHGm3q93j0/1226_AjHGm3q93j0_tokenflow.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video17" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1226_AjHGm3q93j0/1226_AjHGm3q93j0_rave.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video18" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1226_AjHGm3q93j0/1226_AjHGm3q93j0_ground-a-video.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">TokenFlow</th>
+                    <th style="font-size: 16px" align="center">RAVE</th>
+                    <th style="font-size: 16px" align="center">Ground-A-Video</th>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="item">
+              <h2 class="title is-6 has-text-justified">
+                Prompt: <i>"A <span style="color: rgb(242, 219, 10)">woman in a red dress</span> and a
+                <span style="color: rgb(255, 0, 0)">man in gray sweatpants</span> stand in a room with a white
+                wall and cabinets containing a <span style="color: rgb(0, 0, 255)">top terrarium</span>
+                and a <span style="color: rgb(0, 255, 0)">bottom planter</span>."</i>
+              </h2>
+
+              <table width="690" align="center">
+                <tbody>
+                  <tr>
+                    <th>
+                      <video poster="" id="video19" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/941_fmJ14LvRZIE/941_fmJ14LvRZIE_input.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video20" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/941_fmJ14LvRZIE/941_fmJ14LvRZIE_masked_frames.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video21" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/941_fmJ14LvRZIE/941_fmJ14LvRZIE_mive.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">Input</th>
+                    <th style="font-size: 16px" align="center">Masked Input</th>
+                    <th style="font-size: 16px" align="center">MIVE (Ours)</th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <video poster="" id="video22" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/941_fmJ14LvRZIE/941_fmJ14LvRZIE_controlvideo.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video23" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/941_fmJ14LvRZIE/941_fmJ14LvRZIE_flatten.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video24" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/941_fmJ14LvRZIE/941_fmJ14LvRZIE_fresco.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">ControlVideo</th>
+                    <th style="font-size: 16px" align="center">FLATTEN</th>
+                    <th style="font-size: 16px" align="center">FreSCo</th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <video poster="" id="video25" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/941_fmJ14LvRZIE/941_fmJ14LvRZIE_tokenflow.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video26" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/941_fmJ14LvRZIE/941_fmJ14LvRZIE_rave.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video27" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/941_fmJ14LvRZIE/941_fmJ14LvRZIE_ground-a-video.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">TokenFlow</th>
+                    <th style="font-size: 16px" align="center">RAVE</th>
+                    <th style="font-size: 16px" align="center">Ground-A-Video</th>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="item">
+              <h2 class="title is-6 has-text-justified">
+                Prompt: <i>"A <span style="color: rgb(0, 255, 0)">tiger</span> stands on a patterned floor
+                next to a <span style="color: rgb(242, 219, 10)">blue backpack</span>, with
+                <span style="color: rgb(255, 0, 0)">velvet sofa</span>,
+                <span style="color: rgb(0, 0, 255)">wooden bench</span>,
+                <span style="color: rgb(255, 128, 0)">green desk chair</span>,
+                <span style="color: rgb(0, 255, 255)">leather sofa</span> arranged
+                from left to right."</i>
+              </h2>
+
+              <table width="690" align="center">
+                <tbody>
+                  <tr>
+                    <th>
+                      <video poster="" id="video28" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/186_QRONSdurVEk/186_QRONSdurVEk_input.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video29" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/186_QRONSdurVEk/186_QRONSdurVEk_masked_frames.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video30" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/186_QRONSdurVEk/186_QRONSdurVEk_mive.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">Input</th>
+                    <th style="font-size: 16px" align="center">Masked Input</th>
+                    <th style="font-size: 16px" align="center">MIVE (Ours)</th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <video poster="" id="video31" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/186_QRONSdurVEk/186_QRONSdurVEk_controlvideo.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video32" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/186_QRONSdurVEk/186_QRONSdurVEk_flatten.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video33" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/186_QRONSdurVEk/186_QRONSdurVEk_fresco.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">ControlVideo</th>
+                    <th style="font-size: 16px" align="center">FLATTEN</th>
+                    <th style="font-size: 16px" align="center">FreSCo</th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <video poster="" id="video34" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/186_QRONSdurVEk/186_QRONSdurVEk_tokenflow.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video35" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/186_QRONSdurVEk/186_QRONSdurVEk_rave.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video36" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/186_QRONSdurVEk/186_QRONSdurVEk_ground-a-video.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">TokenFlow</th>
+                    <th style="font-size: 16px" align="center">RAVE</th>
+                    <th style="font-size: 16px" align="center">Ground-A-Video</th>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="item">
+              <h2 class="title is-6 has-text-justified">
+                Prompt: <i>"A <span style="color: rgb(255, 0, 0)">robot</span> works at a
+                <span style="color: rgb(0, 0, 255)">glass table</span> with lab items, holding a pink test tube
+                near a tissue box, <span style="color: rgb(0, 255, 0)">metal beaker with rusty finish</span>,
+                and an <span style="color: rgb(242, 219, 10)">Erlenmeyer flask with metallic finish</span>.
+                A storage rack sits on top of a <span style="color: rgb(256, 128, 0)">wooden table with carvings</span>,
+                near <span style="color: rgb(0, 255, 255)">conference table</span>, a
+                <span style="color: rgb(255, 0, 255)">window with metal frame and blinds</span>
+                and a wall."</i>
+              </h2>
+
+              <table width="690" align="center">
+                <tbody>
+                  <tr>
+                    <th>
+                      <video poster="" id="video37" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1145_lW-41v9HYm0/1145_lW-41v9HYm0_input.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video38" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1145_lW-41v9HYm0/1145_lW-41v9HYm0_masked_frames.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video39" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1145_lW-41v9HYm0/1145_lW-41v9HYm0_mive.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">Input</th>
+                    <th style="font-size: 16px" align="center">Masked Input</th>
+                    <th style="font-size: 16px" align="center">MIVE (Ours)</th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <video poster="" id="video40" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1145_lW-41v9HYm0/1145_lW-41v9HYm0_controlvideo.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video41" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1145_lW-41v9HYm0/1145_lW-41v9HYm0_flatten.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video42" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1145_lW-41v9HYm0/1145_lW-41v9HYm0_fresco.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">ControlVideo</th>
+                    <th style="font-size: 16px" align="center">FLATTEN</th>
+                    <th style="font-size: 16px" align="center">FreSCo</th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <video poster="" id="video43" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1145_lW-41v9HYm0/1145_lW-41v9HYm0_tokenflow.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video44" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1145_lW-41v9HYm0/1145_lW-41v9HYm0_rave.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video45" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/1145_lW-41v9HYm0/1145_lW-41v9HYm0_ground-a-video.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">TokenFlow</th>
+                    <th style="font-size: 16px" align="center">RAVE</th>
+                    <th style="font-size: 16px" align="center">Ground-A-Video</th>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="item">
+              <h2 class="title is-6 has-text-justified">
+                Prompt: <i>"A <span style="color: rgb(0, 255, 0)">zombie</span> speaks to a
+                <span style="color: rgb(0, 128, 128)">young robot</span> seated on a
+                <span style="color: rgb(242, 219, 10)">futon</span> at a
+                <span style="color: rgb(0, 0, 255)">desk</span> with a
+                <span style="color: rgb(255, 128, 0)">crystal bowl</span> atop a
+                <span style="color: rgb(255, 0, 255)">wooden platter</span> on the left side, and a
+                <span style="color: rgb(0, 255, 255)">brass urn</span> atop a
+                <span style="color: rgb(255, 0, 0)">glass plate</span> on the other side, against a
+                light-colored wall."</i>
+              </h2>
+
+              <table width="690" align="center">
+                <tbody>
+                  <tr>
+                    <th>
+                      <video poster="" id="video46" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/219_-70GtKnhvos/219_-70GtKnhvos_input.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video47" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/219_-70GtKnhvos/219_-70GtKnhvos_masked_frames.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video48" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/219_-70GtKnhvos/219_-70GtKnhvos_mive.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">Input</th>
+                    <th style="font-size: 16px" align="center">Masked Input</th>
+                    <th style="font-size: 16px" align="center">MIVE (Ours)</th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <video poster="" id="video49" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/219_-70GtKnhvos/219_-70GtKnhvos_controlvideo.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video50" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/219_-70GtKnhvos/219_-70GtKnhvos_flatten.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video51" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/219_-70GtKnhvos/219_-70GtKnhvos_fresco.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">ControlVideo</th>
+                    <th style="font-size: 16px" align="center">FLATTEN</th>
+                    <th style="font-size: 16px" align="center">FreSCo</th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <video poster="" id="video52" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/219_-70GtKnhvos/219_-70GtKnhvos_tokenflow.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video53" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/219_-70GtKnhvos/219_-70GtKnhvos_rave.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+
+                    <th>
+                      <video poster="" id="video54" autoplay controls muted loop width="230">
+                        <source src="static/videos/qualitative_comparison/219_-70GtKnhvos/219_-70GtKnhvos_ground-a-video.mp4"
+                        type="video/mp4">
+                      </video>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th style="font-size: 16px" align="center">TokenFlow</th>
+                    <th style="font-size: 16px" align="center">RAVE</th>
+                    <th style="font-size: 16px" align="center">Ground-A-Video</th>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Comparison -->
+
+<!-- Image carousel -->
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--       <div class="item">-->
+<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--          First image description.-->
+<!--        </h2>-->
+<!--      </div>-->
+<!--      <div class="item">-->
+<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--          Second image description.-->
+<!--        </h2>-->
+<!--      </div>-->
+<!--      <div class="item">-->
+<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--         Third image description.-->
+<!--       </h2>-->
+<!--     </div>-->
+<!--     <div class="item">-->
+<!--      &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>-->
+<!--      <h2 class="subtitle has-text-centered">-->
+<!--        Fourth image description.-->
+<!--      </h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End image carousel &ndash;&gt;-->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
